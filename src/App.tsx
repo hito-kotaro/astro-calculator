@@ -1,8 +1,7 @@
-import React, { ChangeEvent, useState } from "react";
-import logo from "./logo.svg";
-import { tier1Recipes } from "./data/tier1Recipes";
+import { ChangeEvent, useState } from "react";
 import "./App.css";
 import { recipe, selectedRecipe } from "./data/itemTypes";
+
 import AddIcon from "@mui/icons-material/Add";
 import RemoveIcon from "@mui/icons-material/Remove";
 import DeleteIcon from "@mui/icons-material/Delete";
@@ -25,10 +24,11 @@ import {
   Typography,
 } from "@mui/material";
 import Grid from "@mui/material/Grid2";
+
+import { tier1Recipes } from "./data/tier1Recipes";
 import { tier2Recipes } from "./data/tier2Recipes";
 import { tier3Recipes } from "./data/tier3Recipes";
 import { tier4Recipes } from "./data/tier4Recipes";
-import { useInputNumber } from "./hooks/useInputNumber";
 import { useInputText } from "./hooks/useInputText";
 
 function App() {
