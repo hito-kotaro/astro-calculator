@@ -73,6 +73,7 @@ function App() {
   const handleChangeTier = (e: SelectChangeEvent) => {
     const tier = Number(e.target.value);
     setPrinter(Number(tier));
+    setPage(1);
     if (tier === 10) {
       // set item tier1
       setItems(tier1Recipes.slice(0, 15));
@@ -102,7 +103,7 @@ function App() {
 
   const handleClickItemButton = (r: selectedRecipe) => {
     // 選択されていなければ追加
-    if (!selected.some((s) => s.recipe.id === r.recipe.id)) {
+    if (!selected.some((s) => s.recipe.name === r.recipe.name)) {
       setSelected([...selected, r]);
     }
   };
